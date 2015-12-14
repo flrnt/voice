@@ -3,8 +3,8 @@ class Vote < ActiveRecord::Base
   validates :choice, presence: true
 
 
-  def has_valid_ssn?
-    #ensure the ssn is valid through API
+  def has_valid_key?
+    #ensure the ssn key is valid through formula : 97 - (ssn % 97)
     self.ssn.last(2).to_i == 97 - (self.ssn.to_i % 97)
   end
 
