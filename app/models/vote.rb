@@ -1,5 +1,5 @@
 class Vote < ActiveRecord::Base
-  validates :ssn, presence: true, uniqueness: true
+  validates :ssn, presence: true, uniqueness: true, length: {is: 15 } # length 13 if key is not include
   validates :choice, presence: true
 
 
