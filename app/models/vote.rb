@@ -9,9 +9,7 @@ class Vote < ActiveRecord::Base
   end
 
   def is_male?
-    if self.has_valid_ssn?
-      self.ssn.slice(0).to_i == 1
-    end
+    self.ssn.slice(0).to_i == 1
   end
 end
 

@@ -1,0 +1,30 @@
+<div class="jumbotron">
+  <div class="text-center">
+    <p>5 678 9<%= pluralize(@votes.count, "votant") %> (taux de participation ... %)</p>
+  </div>
+  <div class="gender">
+    <p class="male">
+      <i class="fa fa-male"></i>
+      <%= pluralize(@male_votes.count, "vote") %> (<%= @male_percentage.round(2) %>% des votants)
+    </p>
+    <p class="female">
+      <i class="fa fa-female"></i>
+      <%= pluralize(@female_votes.count, "vote") %> (<%= @female_percentage.round(2) %>% des votants)
+    </p>
+  </div>
+  <ul>
+    <li>
+      <%= pluralize(@white_votes.count, "vote") %> Blanc
+    </li>
+    <li>
+      <%= pluralize(@LR_votes.count, "vote") %> "Les Républicains"
+    </li>
+    <li>
+      <%= pluralize(@FN_votes.count, "vote") %> "Front National"
+    </li>
+    <li>
+      <%= pluralize(@PS_votes.count, "vote") %> "Parti Socialiste"
+    </li>
+  </ul>
+  <%= link_to "home", root_path %>
+</div>

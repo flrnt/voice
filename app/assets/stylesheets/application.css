@@ -13,3 +13,35 @@
  *= require_tree .
  *= require_self
  */
+
+.gender {
+  display: flex;
+  justify-content: space-around;
+}
+.gender i {
+  font-size: 75px;
+}
+.male, .female {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 200px;
+  width: 350px;
+  border-radius: 3px;
+  box-shadow: 1px 1px 2px #CACACA;
+}
+.male {
+  background-color: #33AAFF;
+}
+.fa-male {
+  color: #3495EF;
+
+}
+.female {
+  background-color: pink;
+}
+.fa-female {
+  color: #EFACB8;
+
+}

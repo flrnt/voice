@@ -1,4 +1,7 @@
-<%= simple_form (@vote) do |f| %>
-  <%= f.input :ssn %>
-  <%= f.submit "Je vote" %>
-<% end %>
+<div class="text-center jumbotron">
+  <%= simple_form_for (@vote) do |f| %>
+    <%= f.input :ssn %>
+    <%= f.input :choice, collection: ["blanc", "LR", "PS", "FN"], prompt: "Sélectionnez votre bulletin" %>
+    <%= f.submit "Je vote", class:'btn btn-success' %>
+  <% end %>
+</div>
