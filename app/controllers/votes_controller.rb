@@ -2,7 +2,7 @@ class VotesController < ApplicationController
   def index
     @votes = Vote.all
 
-    @white_votes = @votes.select{ |vote| vote.choice == "blanc" }
+    @white_votes = @votes.select{ |vote| vote.choice == "blanc" }.count
     @LR_votes = @votes.select{ |vote| vote.choice == "LR"}
     @FN_votes = @votes.select{ |vote| vote.choice == "FN"}
     @PS_votes = @votes.select{ |vote| vote.choice == "PS"}
@@ -25,6 +25,11 @@ class VotesController < ApplicationController
     else
       render 'new'
     end
+  end
+
+  def advanced_stats
+    #operations
+    #respond_to format js
   end
 
   private
