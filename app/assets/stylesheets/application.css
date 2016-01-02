@@ -13,7 +13,6 @@
  *= require_tree .
  *= require_self
  */
-
 .gender {
   display: flex;
   justify-content: space-around;
@@ -34,14 +33,23 @@
 .male {
   background-color: #33AAFF;
 }
-.fa-male {
+.blue {
   color: #3495EF;
-
 }
 .female {
   background-color: pink;
 }
-.fa-female {
+.pink {
   color: #EFACB8;
 
+}
+.advanced_stats {
+  margin: auto 30px;
+  padding: 10px;
+  background-color: rgba(144, 204, 144, 0.38);
+}
+.advanced_stats h3 {
+  margin: 20px;
+  color: rgba(31, 117, 31, 0.35);
+  text-transform: uppercase;
 }

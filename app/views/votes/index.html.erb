@@ -1,19 +1,21 @@
+<%= link_to "home", root_path %>
 <div class="jumbotron">
   <div class="text-center">
     <p><%= pluralize(@votes.count, "votant") %> (taux de participation ... %)</p>
   </div>
   <div class="gender">
     <p class="male">
-      <i class="fa fa-male"></i>
+      <i class="fa fa-male blue"></i>
       <%= pluralize(@male_votes.count, "vote") %> (<%= @male_percentage.round(2) %>% des votants)
     </p>
     <p class="female">
-      <i class="fa fa-female"></i>
+      <i class="fa fa-female pink"></i>
       <%= pluralize(@female_votes.count, "vote") %> (<%= @female_percentage.round(2) %>% des votants)
     </p>
   </div>
-  <div class="jumbotron">
-    <ul>
+  <div class="advanced_stats">
+    <h3 class="text-center">Statistiques</h3>
+    <ul class="">
       <li>
         <%= pluralize(@white_votes, "vote") %> Blanc
       </li>
@@ -28,5 +30,4 @@
       </li>
     </ul>
   </div>
-  <%= link_to "home", root_path %>
 </div>
