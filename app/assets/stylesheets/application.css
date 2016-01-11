@@ -53,3 +53,6 @@
   color: rgba(31, 117, 31, 0.35);
   text-transform: uppercase;
 }
+.jumbotron {
+  margin-bottom: 0px;
+}
